@@ -1,0 +1,4 @@
+rootProject.name = "lostrego"
+
+include "lostrego"
+// include "lostrego-app"
