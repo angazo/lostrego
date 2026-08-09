@@ -1,3 +1,10 @@
+# Java frameworks
+.idea/
+.vscode/
+
+# IA folders and files
+.opencode/
+
 # Compiled class file
 *.class
 
