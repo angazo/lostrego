@@ -57,7 +57,7 @@ Paquete base: com.angazo.lostrego
 ## Estado actual
 
 - **Fase actual:** Fase 0 — arranque del proyecto, definición de arquitectura y API pública
-- **Último hito:** Creación del repositorio y configuración inicial (AGENTS.md, OpenSpec)
+- **Último hito:** Implementado y mergeado el issue #1: esqueleto Gradle con Java 25 toolchain, JUnit 5, módulo único `lostrego/` bajo `src/`, CI con GitHub Actions (matriz Linux + Windows, solo PRs). Change archivado como `2026-08-09-is1-gradle-ci`.
 - **Próximo hito:** Definir la API pública de `lostrego` (interfaces `PacketCapture`, `PacketListener`, modelo `Packet`) y el primer backend (libpcap)
 
 ## Convenciones de código
@@ -74,6 +74,8 @@ Paquete base: com.angazo.lostrego
 - **Commits**: mensajes de commit en inglés, siguiendo conventional commits (feat:, fix:, docs:, etc.)
 - **Issues y milestones de GitHub**: redactados en inglés (títulos y descripciones).
 - **Paquete base**: `com.angazo.lostrego`
+- **Layout de proyecto**: los ficheros de build de Gradle y los módulos viven bajo el directorio `src/` (mismo patrón que el proyecto arume). Los comandos Gradle se ejecutan desde `src/`.
+- **Catálogo de versiones**: las dependencias se centralizan en `src/gradle/libs.versions.toml`. Usar `version.ref` en las dependencias de submódulos, no versiones inline.
 
 ## Pruebas de la aplicación
 
