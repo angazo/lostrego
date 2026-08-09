@@ -72,6 +72,7 @@ Paquete base: com.angazo.lostrego
 - **Idioma**: código fuente en inglés (nombres de clases, métodos, variables, comentarios y logs). Documentación del proyecto (AGENTS.md, openspec/) en español.
 - **Documentación OpenSpec**: la prosa de `proposal.md`, `design.md`, `tasks.md` y las especificaciones debe estar en español. Se mantienen en inglés únicamente las palabras, encabezados, etiquetas o marcadores que OpenSpec exija, además de nombres de módulos, clases, interfaces, rutas, códigos y otros identificadores técnicos.
 - **Commits**: mensajes de commit en inglés, siguiendo conventional commits (feat:, fix:, docs:, etc.)
+- **Issues y milestones de GitHub**: redactados en inglés (títulos y descripciones).
 - **Paquete base**: `com.angazo.lostrego`
 
 ## Pruebas de la aplicación
