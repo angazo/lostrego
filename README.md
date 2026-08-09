@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Cross-platform packet capture library for Java, using the FFM API to talk directly to native OS libraries such as <strong>libpcap</strong> and <strong>PDPK</strong> on Linux/macOS, and <strong>npcap</strong> on Windows.
+  Cross-platform packet capture library for Java, using the FFM API to talk directly to native OS libraries such as <strong>libpcap</strong> on Linux/macOS, <strong>PDPK</strong> on Linux, and <strong>npcap</strong> on Windows.
 </p>
 
 ---
@@ -19,7 +19,7 @@ Lostrego talks to different native libraries depending on the platform:
 | Backend | Platform | Description |
 |---|---|---|
 | [libpcap](https://www.tcpdump.org/) | Linux, macOS | Standard packet capture library on Unix. Provides an API to capture live packets, read/write `.pcap` files, and apply BPF filters. |
-| [PDPK](https://www.dpdk.org/) | Linux, macOS | Data Plane Development Kit. High-performance framework that bypasses the kernel and accesses the NIC directly via DMA, achieving near-wire-speed capture with minimal latency. |
+| [PDPK](https://www.dpdk.org/) | Linux | Data Plane Development Kit. High-performance framework that bypasses the kernel and accesses the NIC directly via DMA, achieving near-wire-speed capture with minimal latency. |
 | [npcap](https://npcap.com/) | Windows | Packet capture library for Windows, compatible with libpcap APIs. Provides raw packet capture and injection on Windows networks. |
 
 ## Purpose
@@ -32,7 +32,7 @@ This project is developed for **non-profit and educational purposes**, aiming to
 
 - [x] Gradle build skeleton and CI pipeline
 - [ ] Backend: libpcap (Linux/Mac)
-- [ ] Backend: PDPK (Linux/Mac)
+- [ ] Backend: PDPK (Linux)
 - [ ] Backend: npcap (Windows)
 
 ## Development Tools

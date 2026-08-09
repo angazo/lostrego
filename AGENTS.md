@@ -5,7 +5,7 @@
 
 ## Objetivo del proyecto
 
-Crear una librería de captura de paquetes de red en Java 25, usando la API FFM (Foreign Function & Memory) para interactuar directamente con las librerías nativas del Sistema Operativo. PDPK es un framework de altísimas prestaciones que se salta el kernel y accede directamente a la NIC, usando DMA y otras técnicas para minimizar la latencia. La librería podrá usar distintos backends según la plataforma (libpcap y PDPK en Linux/Mac, npcap en Windows).
+Crear una librería de captura de paquetes de red en Java 25, usando la API FFM (Foreign Function & Memory) para interactuar directamente con las librerías nativas del Sistema Operativo. PDPK es un framework de altísimas prestaciones que se salta el kernel y accede directamente a la NIC, usando DMA y otras técnicas para minimizar la latencia. La librería podrá usar distintos backends según la plataforma (libpcap en Linux/Mac, PDPK en Linux, npcap en Windows).
 
 ## Stack tecnológico
 
@@ -14,7 +14,8 @@ Crear una librería de captura de paquetes de red en Java 25, usando la API FFM 
 | Lenguaje | Java 25 |
 | Build | Gradle |
 | Interop. nativa | FFM API (Foreign Function & Memory, incubada → estándar en Java 25) |
-| Backends Linux/Mac | libpcap, PDPK |
+| Backends Linux/Mac | libpcap |  
+| Backend Linux | PDPK |
 | Backend Windows | npcap |
 | Testing | JUnit 5 (JUnitPlatform) |
 | CI | GitHub Actions |
@@ -29,7 +30,7 @@ src/
 │   └── src/main/java/com/angazo/lostrego/
 │       ├── core/                    → API pública, modelo de paquetes y abstracciones comunes
 │       ├── backend/libpcap/         → Backend libpcap (Linux/Mac)
-│       ├── backend/pdpk/            → Backend PDPK (Linux/Mac)
+│       ├── backend/pdpk/            → Backend PDPK (Linux)
 │       └── backend/npcap/           → Backend npcap (Windows)
 │
 └── lostrego-app/                    → (futuro) App de ejemplo que consume la librería
