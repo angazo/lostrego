@@ -1,3 +1,11 @@
 module com.angazo.lostrego {
-    // Exports will be added as the public API is defined
+    exports com.angazo.lostrego.core;
+
+    uses com.angazo.lostrego.core.spi.CaptureProvider;
+
+    // Backends are declared here as they are implemented, e.g.:
+    // provides com.angazo.lostrego.core.spi.CaptureProvider
+    //     with com.angazo.lostrego.backend.libpcap.LibpcapProvider,
+    //          com.angazo.lostrego.backend.pdpk.PdpkProvider,
+    //          com.angazo.lostrego.backend.npcap.NpcapProvider;
 }
