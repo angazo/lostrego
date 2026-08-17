@@ -57,9 +57,9 @@ Paquete base: com.angazo.lostrego
 
 ## Estado actual
 
-- **Fase actual:** Fase 0 — arranque del proyecto, definición de arquitectura y API pública
-- **Último hito:** Implementado y mergeado el issue #1: esqueleto Gradle con Java 25 toolchain, JUnit 5, módulo único `lostrego/` bajo `src/`, CI con GitHub Actions (matriz Linux + Windows, solo PRs). Change archivado como `2026-08-09-is1-gradle-ci`.
-- **Próximo hito:** Definir la API pública de `lostrego` (interfaces `PacketCapture`, `PacketListener`, modelo `Packet`) y el primer backend (libpcap)
+- **Fase actual:** Fase 1 — implementación de backends nativos (libpcap → pdpk → npcap)
+- **Último hito:** Implementado y mergeado el issue #5: API pública de `core` (`PacketCapture`, `PacketListener`, modelo inmutable `Packet` con `CaptureTimestamp`/`LinkType`/`CaptureStatistics`, `CaptureConfig` con builder, factoría `PacketCaptures` + SPI `CaptureProvider` vía `ServiceLoader`) con tests unitarios en Java puro (31 tests). Change archivado como `2026-08-17-is5-core-api`. **Fase 0 completada.**
+- **Próximo hito:** Backend libpcap (Linux/Mac) mediante FFM, implementando `CaptureProvider`. Le seguirán pdpk (Linux) y npcap (Windows).
 
 ## Convenciones de código
 
@@ -100,6 +100,10 @@ Paquete base: com.angazo.lostrego
 > Haciendo uso de GitHub y sus issues y milestones, iremos definiendo de forma incremental
 > las funcionalidades del proyecto. Nos ayudaremos de agentes de IA y de OpenSpec para
 > ir definiendo cada "change" e implementándolo.
+
+- **Fase 0 — arranque y API pública** (completada): esqueleto Gradle + CI (issue #1) y API pública de `core` + SPI (issue #5).
+- **Fase 1 — backends nativos**: libpcap (Linux/Mac) → pdpk (Linux) → npcap (Windows), cada uno implementando `CaptureProvider` mediante FFM.
+- **Futuro** (sin milestone asignado aún): capa de parseo de protocolos, captura offline, enumeración de dispositivos, publicación a Maven Central, macOS en CI. Ver issues en el milestone Backlog.
 
 ## Preferencias de trabajo del usuario
 

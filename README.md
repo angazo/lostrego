@@ -28,9 +28,13 @@ This project is developed for **non-profit and educational purposes**, aiming to
 
 ## Project Status
 
-> **Phase 0** — Scaffolding and initial setup
+> **Phase 0** — Scaffolding and public API — **completed**
 
 - [x] Gradle build skeleton and CI pipeline
+- [x] Public core API: packet model, capture lifecycle, backend SPI
+
+> **Phase 1** — Native backends
+
 - [ ] Backend: libpcap (Linux/Mac)
 - [ ] Backend: PDPK (Linux)
 - [ ] Backend: npcap (Windows)
