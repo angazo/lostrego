@@ -58,8 +58,9 @@ Paquete base: com.angazo.lostrego
 ## Estado actual
 
 - **Fase actual:** Fase 1 — implementación de backends nativos (libpcap → pdpk → npcap)
-- **Último hito:** Implementado y mergeado el issue #5: API pública de `core` (`PacketCapture`, `PacketListener`, modelo inmutable `Packet` con `CaptureTimestamp`/`LinkType`/`CaptureStatistics`, `CaptureConfig` con builder, factoría `PacketCaptures` + SPI `CaptureProvider` vía `ServiceLoader`) con tests unitarios en Java puro (31 tests). Change archivado como `2026-08-17-is5-core-api`. **Fase 0 completada.**
-- **Próximo hito:** Backend libpcap (Linux/Mac) mediante FFM, implementando `CaptureProvider`. Le seguirán pdpk (Linux) y npcap (Windows).
+- **Último hito:** Implementado y mergeado el issue #12: backend libpcap (Linux/macOS) mediante FFM (`LibpcapNative` con bindings, `LibpcapCapture` con ciclo de vida, `LibpcapProvider` registrado en `module-info`). Incluye filtro BPF, estadísticas, traducción de `struct pcap_pkthdr` al modelo `core`, y tests condicionales (parseo offline de `.pcap` + captura viva loopback protegida por privilegios). Change archivado como `2026-08-19-is12-libpcap-backend`.
+- **Próximo hito:** Backend pdpk (Linux) mediante FFM. Le seguirá npcap (Windows).
+
 
 ## Convenciones de código
 
