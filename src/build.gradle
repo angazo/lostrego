@@ -18,6 +18,7 @@ subprojects {
 
     tasks.named('test') {
         useJUnitPlatform()
+        jvmArgs '--enable-native-access=ALL-UNNAMED'
     }
 
     tasks.withType(JavaCompile).configureEach {
