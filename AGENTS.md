@@ -149,8 +149,9 @@ Cada change de OpenSpec se rastrea en GitHub con este ciclo:
 2. **Issue en GitHub** para el change, con enlace a su carpeta `openspec/changes/<nombre>/`
    y **milestone de su fase** (Fase 0, Fase 1…). Los milestones dan la vista de progreso
    por fase.
-3. **Rama creada desde el issue** (panel *Development* → "Create a branch"; nombre tipo
-   `<nº>-<slug>`), partiendo de `main`.
+3. **Rama creada desde el issue** (panel *Development* → "Create a branch"), partiendo de `main`.
+   Convención de nombre: `change/is<nº-issue>_<slug>`. Ejemplo: `change/is12_libpcap-backend`
+   para el issue #12.
 4. Implementación en la rama + push (los push los hace el usuario; el agente no tiene
    SSH hacia `origin` desde su shell).
 5. **PR hacia `main`** con `Closes #<nº>` en la descripción → la CI proyecto
