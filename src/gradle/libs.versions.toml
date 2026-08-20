@@ -1,7 +1,9 @@
 [versions]
 junit-jupiter = "5.12.2"
 junit-platform = "1.12.2"
+picocli = "4.7.6"
 
 [libraries]
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }
+picocli = { module = "info.picocli:picocli", version.ref = "picocli" }
