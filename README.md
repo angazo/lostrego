@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Cross-platform packet capture library for Java, using the FFM API to talk directly to native OS libraries such as <strong>libpcap</strong> on Linux/macOS, <strong>PDPK</strong> on Linux, and <strong>npcap</strong> on Windows.
+  Cross-platform packet capture library for Java, using the FFM API to talk directly to native OS libraries such as <strong>libpcap</strong> on Linux/macOS, <strong>PDPK</strong> on Linux, and <strong>npcap</strong> on Windows. It also ships a companion console client, <strong>Lostrego Spy</strong>, that captures traffic with the library and provides traffic analysis features.
 </p>
 
 ---
@@ -33,11 +33,14 @@ This project is developed for **non-profit and educational purposes**, aiming to
 - [x] Gradle build skeleton and CI pipeline
 - [x] Public core API: packet model, capture lifecycle, backend SPI
 
-> **Phase 1** — Native backends
+> **Phase 1** — Native backends and console client
 
-- [ ] Backend: libpcap (Linux/Mac)
+- [x] Backend: libpcap (Linux/macOS)
+- [x] Lostrego Spy: preliminary console client (capture + analysis)
 - [ ] Backend: PDPK (Linux)
 - [ ] Backend: npcap (Windows)
+
+> _Preliminary: the libpcap backend and Lostrego Spy have not yet been load-tested._
 
 ## Development Tools
 
@@ -45,6 +48,8 @@ This project is developed for **non-profit and educational purposes**, aiming to
 |---|---|
 | [opencode](https://github.com/anomalyco/opencode) | AI coding assistant |
 | [OpenSpec](https://github.com/Fission-AI/OpenSpec/) | Specification-driven development |
+| [Warp](https://www.warp.dev/) | AI-native terminal |
+| [IntelliJ IDEA](https://www.jetbrains.com/idea/) | IDE (JetBrains) |
 
 ## Tech Stack
 
