@@ -1,0 +1,5 @@
+dependencies {
+    implementation project(':lostrego')
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly libs.junit.platform.launcher
+}

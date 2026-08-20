@@ -15,6 +15,11 @@ out/
 .vscode/
 *.code-workspace
 
+### Eclipse
+.project
+.classpath
+.settings/
+
 ### OS
 .DS_Store
 Thumbs.db

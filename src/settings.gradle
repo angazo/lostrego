@@ -1,4 +1,5 @@
 rootProject.name = "lostrego"
 
 include "lostrego"
-// include "lostrego-app"
+include "lostrego-spy-common"
+include "lostrego-spy"
