@@ -57,8 +57,8 @@ Paquete base: com.angazo.lostrego
 
 ## Estado actual
 
-- **Fase actual:** Fase 1 — implementación de backends nativos (libpcap → pdpk → npcap)
-- **Último hito:** Implementado y mergeado el issue #12: backend libpcap (Linux/macOS) mediante FFM (`LibpcapNative` con bindings, `LibpcapCapture` con ciclo de vida, `LibpcapProvider` registrado en `module-info`). Incluye filtro BPF, estadísticas, traducción de `struct pcap_pkthdr` al modelo `core`, y tests condicionales (parseo offline de `.pcap` + captura viva loopback protegida por privilegios). Change archivado como `2026-08-19-is12-libpcap-backend`.
+- **Fase actual:** Fase 1 — implementación de backends nativos (libpcap → pdpk → npcap) y primer consumidor (`lostrego-spy`)
+- **Último hito:** Implementado y mergeado el issue #16: aplicación de consola `lostrego-spy` (dos módulos: `lostrego-spy-common` con la capa de análisis reutilizable —`CaptureSettings`, `CaptureRunner` y el disector de árbol de protocolos `Layer`/`LayerVisitor`— y `lostrego-spy` con la CLI picocli y el renderizado). Empaquetada con el plugin `application` de Gradle (`installDist`/`distZip`) y *native access* declarado vía `applicationDefaultJvmArgs`. Change archivado como `2026-08-20-is16-lostrego-spy`.
 - **Próximo hito:** Backend pdpk (Linux) mediante FFM. Le seguirá npcap (Windows).
 
 
